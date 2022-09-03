@@ -1,13 +1,102 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
 }
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.input-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.input-todo {
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  padding: 5px 10px;
+  transition: .5s linear;
+}
+
+.input-todo:focus {
+  border-bottom: 1px solid rgb(131, 214, 131);
+}
+
+.button-add {
+  text-decoration: none;
+  color: grey;
+  border: 1px solid lightgray;
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 10px;
+  transition: .5s linear;
+}
+
+.button-add:hover {
+  border: 1px solid rgb(131, 214, 131);
+
+}
+
+.todo-list-item {
+  display: flex;
+  align-items: baseline;
+  
+}
+
+.todo-list-item-text {
+  list-style: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.todo-list-item-text:hover {
+  background-color: rgb(212, 207, 207);
+}
+
+.completed-todo {
+  text-decoration: line-through;
+}
+
+

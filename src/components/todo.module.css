@@ -1,0 +1,22 @@
+.todo_list_item {
+    display: flex;
+    align-items: baseline;
+    
+  }
+  
+  .todo_list_item_text {
+    list-style: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .todo_list_item_text:hover {
+    background-color: rgb(212, 207, 207);
+  }
+  
+  .completed_todo {
+    text-decoration: line-through;
+  }

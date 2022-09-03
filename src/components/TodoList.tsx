@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useTypedSelector } from '../hooks/useTypedSelector'
 import { fetchTodos } from '../store/action-creators/todo'
 import { useDispatch } from 'react-redux'
+import TodoItem from './TodoItem'
 
 const TodoList: React.FC = () => {
 
@@ -25,9 +26,9 @@ const TodoList: React.FC = () => {
 
     console.log(todos)
   return (
-    <ul>
+    <ul className='todo-list'>
         { todos.map(todo => {
-            return <li>{todo.title}</li>
+            return <TodoItem title={todo.title} completed={todo.completed} key={todo.id}/>
         }) }
     </ul>
   )
